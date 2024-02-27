@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,5 +22,7 @@ public class Notification implements Serializable {
     private String email;
     @Column(name = "event", nullable = false, length = 120)
     private String event;
+    @Column(name = "date", nullable = false, length = 120)
+    private Date date;
 
 }
