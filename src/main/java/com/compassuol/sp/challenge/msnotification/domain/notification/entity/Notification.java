@@ -1,7 +1,8 @@
 package com.compassuol.sp.challenge.msnotification.domain.notification.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,19 +11,16 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
-@Entity
-@Table(name = "notifications")
+@Document(collection = "notifications")
 public class Notification implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name = "email", nullable = false, length = 120)
+    private String id;
+
     private String email;
-    @Column(name = "event", nullable = false, length = 120)
+
     private String event;
-    @Column(name = "date", nullable = false, length = 120)
+
     private Date date;
 
 }

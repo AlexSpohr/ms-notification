@@ -14,7 +14,7 @@ public class NotificationService {
 
     @Transactional
     public void saveNotification(Notification fileBody) {
-            notificationRepository.save(fileBody);
+            notificationRepository.insert(fileBody);
     }
 
 }
