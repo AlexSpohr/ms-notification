@@ -3,7 +3,7 @@
 -------------------------------------------------------------------------------------------------------
 
 
-O MS Address tem a responsabilidade de armazenar os endereços e vincula-lo a um usuário.
+O MS Notification tem a responsabilidade de gerar novas notificações.
 
 ### Colaborador - Alex Spohr
 
